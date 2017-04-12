@@ -17,8 +17,8 @@ integer g_iNotecardLine;
 key     g_kdsNotecard;
 
 init() {
-	if (llGetInventoryKey("strip.config")==NULL_KEY) {
-		llOwnerSay("Error: strip.config not found");
+	if (llGetInventoryKey(".config")==NULL_KEY) {
+		llOwnerSay("Error: .config not found");
 		return;
 	}
 
