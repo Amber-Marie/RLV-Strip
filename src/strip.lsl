@@ -26,7 +26,7 @@ init() {
 
 	g_lClothing = [];
 	g_iNotecardLine = 0;
-	g_kdsNotecard = llGetNotecardLine("strip.config", g_iNotecardLine);
+	g_kdsNotecard = llGetNotecardLine(".config", g_iNotecardLine);
 }
 
 CovertSay(string sText)
@@ -96,7 +96,7 @@ default
 		} else {
 				string sLine = llStringTrim(sData, STRING_TRIM);
 			if (llGetSubString(sLine, 0, 0)!="#") g_lClothing += sData;
-			g_kdsNotecard = llGetNotecardLine("strip.config", ++g_iNotecardLine);
+			g_kdsNotecard = llGetNotecardLine(".config", ++g_iNotecardLine);
 		}
 	}
 }
