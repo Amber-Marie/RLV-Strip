@@ -4,7 +4,11 @@
 // Of course fully working on modern OpenSim as well :)
 //
 // Doesn't use ossl functions so should work in SL too
-// ===========================================================================
+
+// Change of the configuration file name and information file name 
+// by Amber-Marie Tracey @ OsGrid.
+// Latest version under my name is held at https://github.com/Amber-Marie/RLV-Strip
+// =================================================================================
 
 float   WAIT_TIME = 10; // seconds before object is recharged
 
