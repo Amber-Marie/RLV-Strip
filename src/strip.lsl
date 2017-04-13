@@ -4,7 +4,11 @@
 // Of course fully working on modern OpenSim as well :)
 //
 // Doesn't use ossl functions so should work in SL too
-// ===========================================================================
+
+// Change of the configuration file name and information file name 
+// by Amber-Marie Tracey @ OsGrid.
+// Latest version under my name is held at https://github.com/Amber-Marie/RLV-Strip
+// =================================================================================
 
 float   WAIT_TIME = 10; // seconds before object is recharged
 
@@ -17,8 +21,8 @@ integer g_iNotecardLine;
 key     g_kdsNotecard;
 
 init() {
-	if (llGetInventoryKey("strip.config")==NULL_KEY) {
-		llOwnerSay("Error: strip.config not found");
+	if (llGetInventoryKey(".config")==NULL_KEY) {
+		llOwnerSay("Error: .config not found");
 		return;
 	}
 
@@ -26,7 +30,7 @@ init() {
 
 	g_lClothing = [];
 	g_iNotecardLine = 0;
-	g_kdsNotecard = llGetNotecardLine("strip.config", g_iNotecardLine);
+	g_kdsNotecard = llGetNotecardLine(".config", g_iNotecardLine);
 }
 
 CovertSay(string sText)
@@ -96,7 +100,7 @@ default
 		} else {
 				string sLine = llStringTrim(sData, STRING_TRIM);
 			if (llGetSubString(sLine, 0, 0)!="#") g_lClothing += sData;
-			g_kdsNotecard = llGetNotecardLine("strip.config", ++g_iNotecardLine);
+			g_kdsNotecard = llGetNotecardLine(".config", ++g_iNotecardLine);
 		}
 	}
 }
